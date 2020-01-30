@@ -165,8 +165,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/utils.js"></script>
     <script type="module">
-        var bgColors = ['#edf0f6', '#edf0f6', '#edf0f6', '#edf0f6', '#101010'];
-
         import * as THREE from '../../extensions/three/build/three.module.js';
         import { OrbitControls } from '../../extensions/three/examples/jsm/controls/OrbitControls.js';
         import { GLTFLoader } from '../../extensions/three/examples/jsm/loaders/GLTFLoader.js';
@@ -180,6 +178,7 @@
         var object;
 
         var fps = 0, scrollReady = false, currentSlide = 1;
+        var bgColors = ['#edf0f6', '#edf0f6', '#edf0f6', '#edf0f6', '#101010'];
 
         init();
         function init(){

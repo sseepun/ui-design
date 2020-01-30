@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
     "scroll-out": "^2.2.8",
     "three": "^0.112.1"
+=======
+    "scroll-out": "^2.2.8"
+>>>>>>> 8391cbce1fa6d0664210ba1c20fb2c3061bf8865
   },
   "devDependencies": {},
   "scripts": {

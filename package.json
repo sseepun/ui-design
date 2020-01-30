@@ -1,0 +1,16 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "scroll-out": {
+      "version": "2.2.8",
+      "resolved": "https://registry.npmjs.org/scroll-out/-/scroll-out-2.2.8.tgz",
+      "integrity": "sha512-MbgimDzobEvVrKwQLMwKHJBG9Z2knFJ8yFiPD0lBLbR2w6bBEZW97HNJ+PrAwcHRcEjPSTswLHZq5VVIB7En1g=="
+    },
+    "three": {
+      "version": "0.112.1",
+      "resolved": "https://registry.npmjs.org/three/-/three-0.112.1.tgz",
+      "integrity": "sha512-8I0O74hiYtKl3LgDNcPJbBGOlpekbcJ6fJnImmW3mFdeUFJ2H9Y3/UuUSW2sBdjrIlCM0gvOkaTEFlofO900TQ=="
+    }
+  }
+}

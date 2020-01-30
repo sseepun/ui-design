@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "scroll-out": "^2.2.8",
-    "three": "^0.112.1"
+    "scroll-out": "^2.2.8"
   },
   "devDependencies": {},
   "scripts": {

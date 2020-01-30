@@ -1,0 +1,24 @@
+{
+  "name": "ui-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "scroll-out": "^2.2.8",
+    "three": "^0.112.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sseepun/ui-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sseepun/ui-design/issues"
+  },
+  "homepage": "https://github.com/sseepun/ui-design#readme"
+}

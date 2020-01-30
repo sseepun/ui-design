@@ -190,6 +190,15 @@
             camera.rotation.set(0, 0, radians2(15));
 
             scene = new THREE.Scene();
+            
+            // Loader manager
+            var manager = new THREE.LoadingManager();
+            manager.onProgress = function(url, itemsLoaded, itemsTotal){
+                console.log('GLTF loaded - '+Math.round(itemsLoaded / itemsTotal * 100)+'%');
+            };
+            manager.onStart = function(url, itemsLoaded, itemsTotal){ console.log('GLTF - Start loading'); };
+            manager.onLoad = function(){ console.log('GLTF - Loading complete!'); };
+            manager.onError = function(url){ console.log('GLTF - Error loading '+url); };
 
             new RGBELoader().setDataType(THREE.UnsignedByteType).setPath('assets/hdr/')
                 .load('colorful_studio_1k.hdr', function(hdr){
@@ -205,7 +214,7 @@
                     var envMap = pmremCubeUVPacker.CubeUVRenderTarget.texture;
 
                     // Load GLTF model
-                    var loader = new GLTFLoader().setPath('assets/nike/black/');
+                    var loader = new GLTFLoader(manager).setPath('assets/nike/black/');
                     loader.load('model.gltf', function(gltf){
                         gltf.scene.traverse(function(child){
                             if(child.isMesh){
@@ -366,6 +375,7 @@
                 if(slide==1){
                     let t = back? 0.8: 1.5,
                         zoom = (window.innerWidth<1199.98)? 0.82: 0.7;
+                    if(window.innerWidth<991.98){ zoom = 1.53; }
                     body.css({'background': bgColors[slide-1]});
                     topnav.removeClass('white');
                     footer.removeClass('white');
@@ -391,14 +401,16 @@
                 }else if(slide==2){
                     let t = back? 0.7: 0.9,
                         x = (window.innerWidth<1199.98)? -0.25: -0.34,
-                        z = (window.innerWidth<1199.98)? radians2(20, object.rotation.z): radians2(24, object.rotation.z);
+                        z = (window.innerWidth<1199.98)? radians2(20, object.rotation.z): radians2(24, object.rotation.z),
+                        zoom = 0.77;
+                    if(window.innerWidth<991.98){ x = -0.26; z = radians2(8, object.rotation.z); zoom = 1.65; }
                     body.css({'background': bgColors[slide-1]});
                     topnav.removeClass('white');
                     footer.removeClass('white');
                     loader.css('opacity', .12);
                     new TimelineMax()
                         .to(camera.position, t, {
-                            x: 0, y: 0, z: 0.77, ease: Power3.easeOut
+                            x: 0, y: 0, z: zoom, ease: Power3.easeOut
                         })
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
@@ -417,14 +429,16 @@
                 }else if(slide==3){
                     let t = back? 0.7: 0.9,
                         x = (window.innerWidth<1199.98)? -0.28: -0.42,
-                        z = (window.innerWidth<1199.98)? radians2(190, object.rotation.z): radians2(205, object.rotation.z);
+                        z = (window.innerWidth<1199.98)? radians2(190, object.rotation.z): radians2(205, object.rotation.z),
+                        zoom = 0.92;
+                    if(window.innerWidth<991.98){ x = -0.29; z = radians2(180, object.rotation.z); zoom = 1.92; }
                     body.css({'background': bgColors[slide-1]});
                     topnav.removeClass('white');
                     footer.removeClass('white');
                     loader.css('opacity', .12);
                     new TimelineMax()
                         .to(camera.position, t, {
-                            x: 0, y: 0, z: 0.92, ease: Power3.easeOut
+                            x: 0, y: 0, z: zoom, ease: Power3.easeOut
                         })
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
@@ -443,6 +457,7 @@
                 }else if(slide==4){
                     let t = back? 0.7: 0.9,
                         zoom = (window.innerWidth<1199.98)? 0.62: 0.5;
+                    if(window.innerWidth<991.98){ zoom = 1.45; }
                     body.css({'background': bgColors[slide-1]});
                     topnav.removeClass('white');
                     footer.removeClass('white');
@@ -468,13 +483,14 @@
                 }else if(slide==5){
                     let t = back? 0.7: 1.2,
                         zoom = (window.innerWidth<1199.98)? 1: 0.9;
+                    if(window.innerWidth<991.98){ zoom = 1.84; }
                     body.css({'background': bgColors[slide-1]});
                     topnav.addClass('white');
                     footer.addClass('white');
                     loader.css('opacity', .07);
                     new TimelineMax()
                         .to(camera.position, t, {
-                            x: 0, y: 0, z: 0.9, ease: Power3.easeOut
+                            x: 0, y: 0, z: zoom, ease: Power3.easeOut
                         })
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 

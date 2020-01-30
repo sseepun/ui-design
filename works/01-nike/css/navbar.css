@@ -9,6 +9,10 @@ nav.topnav .logo{
 }
 nav.topnav.white .logo{color:#fff;}
 nav.topnav.white .hamburger > *{background:#fff;}
+@media screen and (max-width:1199.98px){
+    nav.topnav{top:.125rem; padding:1rem 1.25rem;}
+}
+
 
 /* Sidenav */
 nav.sidenav{
@@ -42,6 +46,9 @@ nav.sidenav .menu > *:hover{background-size:100% 100%;}
 @media screen and (max-width:1199.98px){
     nav.sidenav .menus{padding:0 0 5rem 0;}
 }
+@media screen and (max-width:1199.98px){
+    nav.sidenav .top-container{margin:.125rem 0 0 0; padding:1rem 1.25rem;}
+}
 
 
 /* Footer */
@@ -74,3 +81,6 @@ nav.footer .toggle-wireframe::after{
 nav.footer .toggle-wireframe.active::after{opacity:1;}
 nav.footer.white .toggle-wireframe{background:#fff;}
 nav.footer.white .toggle-wireframe::after{border-color:#fff;}
+@media screen and (max-width:1199.98px){
+    nav.footer{bottom:.125rem; padding:1rem 1.25rem;}
+}

@@ -250,9 +250,9 @@
             window.addEventListener('resize', onWindowResize, false);
         }
         function onWindowResize(){
-            if(fps<=0){
-                fps = 60; animate();
-                setTimeout(function(){ fps = 0; }, 1000);
+            if(scrollReady){
+                scrollReady = false;
+                pageUpdate($('#menu li > *.active').attr('href'));
             }
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
@@ -506,6 +506,101 @@
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
                         }, '-='+t+'s')
+                }
+            }
+        }
+        function pageUpdate(slide=1){
+            if(object!==undefined){
+                fps = 90; animate();
+                if(slide==1){
+                    let zoom = (window.innerWidth<1199.98)? 0.82: 0.7;
+                    if(window.innerWidth<991.98){ zoom = 1.53; }
+                    
+                    camera.position.set(0, 0, zoom);
+                    camera.rotation.set(
+                        radians2(0, camera.rotation.x),
+                        radians2(0, camera.rotation.y),
+                        radians2(15, camera.rotation.z)
+                    );
+                    object.position.set(0.045, 0.03, 0);
+                    object.rotation.set(
+                        radians2(0, object.rotation.x),
+                        radians2(-90),
+                        radians2(0, object.rotation.z)
+                    );
+                    setTimeout(function(){ fps = 0; }, 400);
+                }else if(slide==2){
+                    let x = (window.innerWidth<1199.98)? -0.25: -0.34,
+                        z = (window.innerWidth<1199.98)? radians2(20, object.rotation.z): radians2(24, object.rotation.z),
+                        zoom = 0.77;
+                    if(window.innerWidth<991.98){ x = -0.26; z = radians2(8, object.rotation.z); zoom = 1.65; }
+                    
+                    camera.position.set(0, 0, zoom);
+                    camera.rotation.set(
+                        radians2(0, camera.rotation.x),
+                        radians2(0, camera.rotation.y),
+                        radians2(0, camera.rotation.z)
+                    );
+                    object.position.set(x, -0.03, 0.05);
+                    object.rotation.set(
+                        radians2(90, object.rotation.x),
+                        radians2(-180, object.rotation.y),
+                        z
+                    );
+                    setTimeout(function(){ fps = 0; }, 400);
+                }else if(slide==3){
+                    let x = (window.innerWidth<1199.98)? -0.28: -0.42,
+                        z = (window.innerWidth<1199.98)? radians2(190, object.rotation.z): radians2(205, object.rotation.z),
+                        zoom = 0.92;
+                    if(window.innerWidth<991.98){ x = -0.29; z = radians2(180, object.rotation.z); zoom = 1.92; }
+                    
+                    camera.position.set(0, 0, zoom);
+                    camera.rotation.set(
+                        radians2(0, camera.rotation.x),
+                        radians2(0, camera.rotation.y),
+                        radians2(0, camera.rotation.z)
+                    );
+                    object.position.set(x, -0.01, 0.05);
+                    object.rotation.set(
+                        radians2(90, object.rotation.x),
+                        radians2(-180, object.rotation.y),
+                        z
+                    );
+                    setTimeout(function(){ fps = 0; }, 400);
+                }else if(slide==4){
+                    let zoom = (window.innerWidth<1199.98)? 0.62: 0.5;
+                    if(window.innerWidth<991.98){ zoom = 1.45; }
+                    
+                    camera.position.set(0.02, -0.02, zoom);
+                    camera.rotation.set(
+                        radians2(0, camera.rotation.x),
+                        radians2(0, camera.rotation.y),
+                        radians2(-15, camera.rotation.z)
+                    );
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(
+                        radians2(40, object.rotation.x),
+                        radians2(-270, object.rotation.y),
+                        radians2(360, object.rotation.z)
+                    );
+                    setTimeout(function(){ fps = 0; }, 400);
+                }else if(slide==5){
+                    let zoom = (window.innerWidth<1199.98)? 1: 0.9;
+                    if(window.innerWidth<991.98){ zoom = 1.84; }
+                    
+                    camera.position.set(0, 0, zoom);
+                    camera.rotation.set(
+                        radians2(0, camera.rotation.x),
+                        radians2(0, camera.rotation.y),
+                        radians2(0, camera.rotation.z)
+                    );
+                    object.position.set(0, 0, 0);
+                    object.rotation.set(
+                        radians2(0, object.rotation.x),
+                        radians2(-270, object.rotation.y),
+                        radians2(360, object.rotation.z)
+                    );
+                    setTimeout(function(){ fps = 0; }, 400);
                 }
             }
         }

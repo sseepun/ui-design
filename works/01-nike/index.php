@@ -244,6 +244,7 @@
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
             renderer.gammaOutput = true;
+            
             container.appendChild(renderer.domElement);
 
             window.addEventListener('resize', onWindowResize, false);

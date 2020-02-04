@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "scroll-out": "^2.2.8",
+    "three": "^0.112.1"
+=======
     "scroll-out": "^2.2.8"
+>>>>>>> d9f9a7dca1204162ca3fc20854014179f405c97b
+=======
+    "scroll-out": "^2.2.8"
+>>>>>>> 7eb3cd9596fd6662c48b003c3b80e15e72d18453
   },
   "devDependencies": {},
   "scripts": {

@@ -1,0 +1,86 @@
+/* Topnav */
+nav.topnav{
+    position:fixed; top:.1875rem; left:0; width:100vw; padding:1rem 3rem; z-index:90;
+    display:flex; justify-content:space-between; align-items:center; opacity:0;
+}
+nav.topnav .logo{
+    font-size:3.75rem; cursor:pointer; transform:skewX(-15deg); letter-spacing:-.2rem;
+    transition:color .4s;
+}
+nav.topnav.white .logo{color:#fff;}
+nav.topnav.white .hamburger > *{background:#fff;}
+@media screen and (max-width:1199.98px){
+    nav.topnav{top:.125rem; padding:1rem 1.25rem;}
+}
+
+
+/* Sidenav */
+nav.sidenav{
+    position:fixed; top:0; right:0; width:0; height:100vh; background:#101010; z-index:95;
+    overflow:hidden;
+}
+nav.sidenav > .wrapper{position:relative; width:100vw;}
+nav.sidenav .top-container{
+    display:flex; justify-content:space-between; align-items:center; margin:.1875rem 0 0 0;
+    padding:1rem 3em;
+}
+nav.sidenav .logo{
+    font-size:3.75rem; cursor:pointer; transform:skewX(-15deg); letter-spacing:-.2rem;
+    color:#fff;
+}
+nav.sidenav .hamburger > *{background:#fff;}
+nav.sidenav .menu-wrapper{
+    display:flex; width:100%; height:calc(100vh - 6.375rem); align-items:center;
+}
+nav.sidenav .menus{width:100%; padding:0 0 2rem 0;}
+nav.sidenav .menu{width:100%; text-align:center; padding:.875rem 0;}
+nav.sidenav .menu > *{
+    color:#fff; color:transparent; -webkit-background-clip:text; letter-spacing:0;
+    -webkit-text-fill-color:transparent; font-size:4.25rem; word-spacing:-.25rem;
+    cursor:pointer; background-repeat:no-repeat; background-size:0 100%;
+    background-image:linear-gradient(to right, #fff, #fff, #fff);
+    background-position:0 0; -webkit-text-stroke-width:1px; -webkit-text-stroke-color:#fff;
+    transition:all .6s;
+}
+nav.sidenav .menu > *:hover{background-size:100% 100%;}
+@media screen and (max-width:1199.98px){
+    nav.sidenav .menus{padding:0 0 5rem 0;}
+}
+@media screen and (max-width:1199.98px){
+    nav.sidenav .top-container{margin:.125rem 0 0 0; padding:1rem 1.25rem;}
+}
+
+
+/* Footer */
+nav.footer{
+    position:fixed; bottom:.25rem; left:0; width:100vw; padding:1rem 3rem; z-index:80;
+    display:flex; justify-content:space-between; align-items:center; opacity:0;
+}
+nav.footer .socials{display:flex; padding:0; margin:0; align-items:center;}
+nav.footer .social{
+    display:block; text-decoration:none; color:#101010; font-size:2rem; margin:0 1rem 0 0;
+    cursor:pointer; transition:color .4s;
+}
+nav.footer.white .social{color:#fff;}
+nav.footer #menu{list-style:none; padding:0; margin:0; display:flex;}
+nav.footer #menu li > *{
+    display:block; width:.8125rem; height:.8125rem; background:#101010; margin:0 0 0 .5rem;
+    padding:0; border-radius:1000rem; cursor:pointer; transition:width .5s, background .4s;
+}
+nav.footer.white #menu li > *{background:#fff;}
+nav.footer #menu li > *.active{width:3.625rem;}
+nav.footer .options{display:flex; padding:0; margin:0; align-items:center;}
+nav.footer .toggle-wireframe{
+    margin:0 1.25rem 0 0; width:.8125rem; height:.8125rem; border-radius:50%; cursor:pointer;
+    position:relative; background:#101010; transition:background .4s;
+}
+nav.footer .toggle-wireframe::after{
+    content:''; position:absolute; top:0; bottom:0; left:0; right:0; transform:scale(1.8);
+    border-radius:50%; border:1.5px solid #101010; opacity:0; transition:all .4s;
+}
+nav.footer .toggle-wireframe.active::after{opacity:1;}
+nav.footer.white .toggle-wireframe{background:#fff;}
+nav.footer.white .toggle-wireframe::after{border-color:#fff;}
+@media screen and (max-width:1199.98px){
+    nav.footer{bottom:.125rem; padding:1rem 1.25rem;}
+}

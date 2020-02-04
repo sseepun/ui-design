@@ -321,7 +321,7 @@
             }, '-=.8s')
             .staggerFrom('nav.sidenav .menu', .8, {
                 y: 120, opacity: 0, ease: Power3.easeInOut
-            }, .1, '-=.3s')
+            }, .1, '-=.3s');
             .reverse();
         hamburgers.click(function(e){
             e.preventDefault();

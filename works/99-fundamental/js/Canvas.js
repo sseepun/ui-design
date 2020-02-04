@@ -6,19 +6,19 @@ import {
 import Slides from './Slides.js';
   
 export default class Canvas {
-    constructor(images){
+    constructor(selector, images){
         this.clock = new Clock();
         this.images = images;
-        this.createRenderer();
+        this.createRenderer(selector);
         this.createScene();
         this.createTextures();
     }
   
-    createRenderer(){
+    createRenderer(selector){
         this.renderer = new WebGLRenderer({ antialias: true, alpha: true });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(this.renderer.domElement);
+        document.querySelector(selector).appendChild(this.renderer.domElement);
     }
     createScene(){
         this.scene = new Scene();

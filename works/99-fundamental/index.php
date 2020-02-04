@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div id="background-canvas"></div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
@@ -18,7 +18,7 @@
         import Canvas from './js/Canvas.js';
 
         class App {
-            constructor() {
+            constructor(){
                 this.images = [
                     'assets/01.jpg',
                     'assets/02.jpg',
@@ -27,7 +27,7 @@
                     'assets/05.jpg',
                 ];
                 this.mouse = { x: 0, y: 0 };
-                this.canvas = new Canvas(this.images);
+                this.canvas = new Canvas('#background-canvas', this.images);
 
                 this.addEventListeners();
                 this.update();
@@ -61,7 +61,7 @@
             onResize(){
                 if(this.canvas) this.canvas.onResize();
             }
-            addEventListeners() {
+            addEventListeners(){
                 window.addEventListener('mousewheel', this.onWheel.bind(this));
                 window.addEventListener('wheel', this.onWheel.bind(this));
 
@@ -83,7 +83,6 @@
         }
 
         new App();
-
     </script>
 </body>
 </html>

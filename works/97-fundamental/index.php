@@ -15,15 +15,19 @@
 
     <section class="menu-tab">
         <div class="menu-item">
+            HOME
         </div>
         <div class="cover cover-left cover-03"><div class="wrapper"></div></div>
         <div class="menu-item">
+            ABOUT US
         </div>
         <div class="cover cover-right cover-04"><div class="wrapper"></div></div>
         <div class="menu-item">
+            PORTFOLIO
         </div>
         <div class="cover cover-left cover-05"><div class="wrapper"></div></div>
         <div class="menu-item">
+            CONTACT US
         </div>
         <div class="cover cover-right cover-06"><div class="wrapper"></div></div>
     </section>

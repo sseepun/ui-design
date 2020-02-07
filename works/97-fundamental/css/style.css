@@ -15,8 +15,10 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 
 
 /* Menu tab */
-.loading .menu-tab{position:fixed; top:0; left:0; width:100vw; height:100vh; background:#fff; color:#000;}
-
+.menu-tab{position:fixed; top:0; left:0; width:100vw; height:100vh; background:#fff; color:#000;}
+.menu-tab .btn-back{
+    position:absolute; top:1.5rem; right:3rem; font-size:3rem; cursor:pointer;
+}
 /* Cover */
 .cover{
     position:absolute; width:100vw; height:calc(100vh + 40vw); overflow:hidden;

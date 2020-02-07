@@ -30,6 +30,7 @@
             CONTACT US
         </div>
         <div class="cover cover-right cover-06"><div class="wrapper"></div></div>
+        <div class="btn-back"><ion-icon name="arrow-forward"></ion-icon></div>
     </section>
 
     <section class="banner-01">

@@ -23,7 +23,7 @@
         </div>
         <div class="cover cover-right cover-04"><div class="wrapper"></div></div>
         <div class="menu-item">
-            PORTFOLIO
+            OUR WORK
         </div>
         <div class="cover cover-left cover-05"><div class="wrapper"></div></div>
         <div class="menu-item">

@@ -14,6 +14,9 @@ body::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3);}
 body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slategrey;}
 
 
+/* Menu tab */
+.loading .menu-tab{position:fixed; top:0; left:0; width:100vw; height:100vh; background:#fff; color:#000;}
+
 /* Cover */
 .cover{
     position:absolute; width:100vw; height:calc(100vh + 40vw); overflow:hidden;

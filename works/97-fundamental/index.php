@@ -13,6 +13,21 @@
 </head>
 <body class="loading">
 
+    <section class="menu-tab">
+        <div class="menu-item">
+        </div>
+        <div class="cover cover-left cover-03"><div class="wrapper"></div></div>
+        <div class="menu-item">
+        </div>
+        <div class="cover cover-right cover-04"><div class="wrapper"></div></div>
+        <div class="menu-item">
+        </div>
+        <div class="cover cover-left cover-05"><div class="wrapper"></div></div>
+        <div class="menu-item">
+        </div>
+        <div class="cover cover-right cover-06"><div class="wrapper"></div></div>
+    </section>
+
     <section class="banner-01">
         <div class="container">
             <div class="slide-container">

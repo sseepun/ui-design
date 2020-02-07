@@ -25,7 +25,7 @@
                                 <div class="btn-next" style="--delay:1s;" data-img="assets/img/<?php echo sprintf('%02d', $i); ?>.jpg">
                                     Interior Innovations
                                 </div>
-                                <div class="btn-next2" style="--delay:1s;" data-img="assets/img/<?php echo sprintf('%02d', $i); ?>.jpg">
+                                <div class="btn-menu" style="--delay:1s;" data-img="assets/img/<?php echo sprintf('%02d', $i); ?>.jpg">
                                     Back to Menu
                                 </div>
                             </div>

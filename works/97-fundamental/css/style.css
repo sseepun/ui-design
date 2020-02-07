@@ -68,12 +68,12 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 .banner-01 .slide.slick-active .btn-next{opacity:1; transform:translateY(0); transition-delay:var(--delay);}
 .loading .banner-01 .slide .btn-next{opacity:0!important; transform:translateY(5rem)!important;}
 
-.banner-01 .slide .btn-next2{
-    text-decoration:none; font-size:3.5rem; font-weight:600; color:#fff; outline:none; cursor:pointer;
+.banner-01 .slide .btn-menu{
+    text-decoration:none; font-size:1.5rem; font-weight:600; color:#fff; outline:none; cursor:pointer;
     font-weight:900; opacity:0; transform:translateY(3rem); text-transform:uppercase; transition:all .75s;
 }
-.banner-01 .slide.slick-active .btn-next2{opacity:1; transform:translateY(0); transition-delay:var(--delay);}
-.loading .banner-01 .slide .btn-next2{opacity:0!important; transform:translateY(5rem)!important;}
+.banner-01 .slide.slick-active .btn-menu{opacity:1; transform:translateY(0); transition-delay:var(--delay);}
+.loading .banner-01 .slide .btn-menu{opacity:0!important; transform:translateY(5rem)!important;}
 
 
 .banner-01 .dots{position:absolute; bottom:0; right:3rem; height:4rem; display:flex; align-items:center;}

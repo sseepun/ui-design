@@ -17,19 +17,19 @@
         <div class="menu-item-home">
             HOME
         </div>
-        <div class="cover cover-left-menu cover-03"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-left-menu cover-03"><div class="wrapper"></div></div>
         <div class="menu-item-about">
             ABOUT US
         </div>
-        <div class="cover cover-right-menu cover-04"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-right-menu cover-04"><div class="wrapper"></div></div>
         <div class="menu-item-work">
             OUR WORK
         </div>
-        <div class="cover cover-left-menu cover-05"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-left-menu cover-05"><div class="wrapper"></div></div>
         <div class="menu-item-contact">
             CONTACT US
         </div>
-        <div class="cover cover-right-menu cover-06"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-right-menu cover-06"><div class="wrapper"></div></div>
         <div class="btn-back"><ion-icon name="arrow-forward"></ion-icon></div>
     </section>
 
@@ -182,12 +182,7 @@
                     {top: 0, opacity: 1, ease: Power1.easeInOut},
                     {top: -80, opacity: 0, ease: Power1.easeInOut}
                 )
-            .fromTo('.banner-01', .8,
-                {top: 0, opacity: 1, ease: Power3.easeInOut},
-                {top: -100, opacity: 0, ease: Power3.easeInOut},
-                '-=.6'
-            )
-            .fromTo('.cover-03', 1, 
+            .fromTo('.cover-03', 3, 
                 {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
                 {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
                 '-=.6'

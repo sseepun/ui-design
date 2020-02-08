@@ -221,17 +221,17 @@
             timelineMenu.reversed( false );
 
         });
-
-
         $('.menu-tab').find('.btn-back').click(function(e){
             e.preventDefault();
-            $('.menu-tab').css(
-                'position', 'fixed'
-            );
-            $('.menu-tab').css(
-                'opacity', '0'
-            );
             timelineMenu.reversed( true);
+            window.setTimeout(function reversed(){
+                $('.menu-tab').css(
+                    'position', 'fixed'
+                );
+                $('.menu-tab').css(
+                    'opacity', '0'
+                );
+            }, 2600);
         });
 
 

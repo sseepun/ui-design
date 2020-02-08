@@ -51,8 +51,17 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 }
 
 /* Menu-tab cover */
+.cover.cover-left-menu > .wrapper::before, .cover.cover-left-menu > .wrapper::after{
+    content:''; position:absolute; left:0; width:200vw; height:80vh;
+}
+
+
 .cover.cover-left-menu > .wrapper::before{top:0; transform-origin:top left; transform:rotate(-60deg);}
 .cover.cover-left-menu > .wrapper::after{bottom:0; transform-origin:bottom left; transform:rotate(60deg);}
+
+.cover.cover-right-menu > .wrapper::before, .cover.cover-right-menu > .wrapper::after{
+    content:''; position:absolute; right:0; width:200vw; height:80vh;
+}
 
 .cover.cover-03 > .wrapper, .cover.cover-03 > .wrapper::before, .cover.cover-03 > .wrapper::after{
     background:#bd9062;

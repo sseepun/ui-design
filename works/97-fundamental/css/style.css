@@ -44,6 +44,19 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 .cover.cover-02 > .wrapper, .cover.cover-02 > .wrapper::before, .cover.cover-02 > .wrapper::after{
     background:#000;
 }
+.cover.cover-03 > .wrapper, .cover.cover-02 > .wrapper::before, .cover.cover-02 > .wrapper::after{
+    background:#bd9062;
+}
+.cover.cover-04 > .wrapper, .cover.cover-01 > .wrapper::before, .cover.cover-01 > .wrapper::after{
+    background:#835d52;
+}
+.cover.cover-05 > .wrapper, .cover.cover-02 > .wrapper::before, .cover.cover-02 > .wrapper::after{
+    background:#8ca8b3;
+}
+.cover.cover-06 > .wrapper, .cover.cover-01 > .wrapper::before, .cover.cover-01 > .wrapper::after{
+    background:#70675b;
+}
+
 
 
 /* BLOCK: Banner 01 */

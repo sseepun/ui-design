@@ -14,22 +14,22 @@
 <body class="loading">
 
     <section class="menu-tab">
-        <div class="menu-item-home">
+        <div class="menu-item-home"style="z-index:3 !important;">
             HOME
         </div>
-        <div class="cover cover-left-menu cover-03"><div class="wrapper"></div></div>
-        <div class="menu-item-about">
+        <div class="cover cover-left-menu cover-03" style="z-index:4 !important;"><div class="wrapper" style="height:500vh !important"></div></div>
+        <div class="menu-item-about" style="z-index:5 !important;">
             ABOUT US
         </div>
-        <div class="cover cover-right-menu cover-04"><div class="wrapper"></div></div>
-        <div class="menu-item-work">
+        <div class="cover cover-right-menu cover-04" style="z-index:6 !important;"><div class="wrapper" style="height:500vh !important"></div></div>
+        <div class="menu-item-work" style="z-index:7 !important;">
             OUR WORK
         </div>
-        <div class="cover cover-left-menu cover-05"><div class="wrapper"></div></div>
-        <div class="menu-item-contact">
+        <div class="cover cover-left-menu cover-05" style="z-index:8 !important;"><div class="wrapper" style="height:500vh !important"></div></div>
+        <div class="menu-item-contact"style="z-index:9 !important;">
             CONTACT US
         </div>
-        <div class="cover cover-right-menu cover-06"><div class="wrapper"></div></div>
+        <div class="cover cover-right-menu cover-06" style="z-index:10 !important;"><div class="wrapper" style="height:500vh !important"></div></div>
         <div class="btn-back"><ion-icon name="arrow-forward"></ion-icon></div>
     </section>
 
@@ -182,12 +182,31 @@
                     {top: 0, opacity: 1, ease: Power1.easeInOut},
                     {top: -80, opacity: 0, ease: Power1.easeInOut}
                 )
-            .fromTo('.cover-03', 3, 
+            .fromTo('.cover-06', 2, 
+                {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
+                {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
+                '-=.8'
+            )
+            .from('.menu-item-contact', .8, {top: 100, opacity: 0, ease: Power3.easeInOut}, '-=.9')
+            .fromTo('.cover-05', 2, 
                 {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
                 {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
-                '-=.6'
+                '-=1.2'
+            )
+            .from('.menu-item-work', .8, {top: 100, opacity: 0, ease: Power3.easeInOut}, '-=.9')
+            .fromTo('.cover-04', 2, 
+                {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
+                {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
+                '-=1.2'
+            )
+            .from('.menu-item-about', .8, {top: 100, opacity: 0, ease: Power3.easeInOut}, '-=.9')
+            .fromTo('.cover-03', 2, 
+                {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
+                {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
+                '-=1.2'
             )
             .from('.menu-item-home', .8, {top: 100, opacity: 0, ease: Power3.easeInOut}, '-=.9')
+            .from('.menu-tab .btn-back', .8, {top: 100, opacity: 0, ease: Power3.easeInOut}, '-=.9')
             .reverse();
 
 

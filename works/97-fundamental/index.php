@@ -192,6 +192,7 @@
                 {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
                 '-=.6'
             )
+            .reverse();
 
 
         banner.find('.btn-menu').click(function(e){
@@ -215,6 +216,7 @@
             $('.menu-tab').css(
                 'opacity', '0'
             );
+            timelineMenu.reversed( true );
             
         });
 

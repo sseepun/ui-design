@@ -17,19 +17,19 @@
         <div class="menu-item-home">
             HOME
         </div>
-        <div class="cover cover-left-menu cover-03"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-left-menu cover-03"><div class="wrapper"></div></div>
         <div class="menu-item-about">
             ABOUT US
         </div>
-        <div class="cover cover-right-menu cover-04"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-right-menu cover-04"><div class="wrapper"></div></div>
         <div class="menu-item-work">
             OUR WORK
         </div>
-        <div class="cover cover-left-menu cover-05"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-left-menu cover-05"><div class="wrapper"></div></div>
         <div class="menu-item-contact">
             CONTACT US
         </div>
-        <div class="cover cover-right-menu cover-06"><div class="wrapper"></div></div>
+        <div class="tab-cover cover-right-menu cover-06"><div class="wrapper"></div></div>
         <div class="btn-back"><ion-icon name="arrow-forward"></ion-icon></div>
     </section>
 

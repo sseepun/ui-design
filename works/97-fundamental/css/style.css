@@ -51,32 +51,28 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 }
 
 /* Menu-tab cover */
-.tab-cover{
-    position:absolute; width:100vw; height:100vh; overflow:hidden;
-    display:flex; align-items:center; top:100vh; left:0;
-}
-.tab-cover.cover-left-menu > .wrapper::before, .cover.cover-left-menu > .wrapper::after{
+.cover.cover-left-menu > .wrapper::before, .cover.cover-left-menu > .wrapper::after{
     content:''; position:absolute; left:0; width:200vw; height:80vh;
 }
 
 
-.tab-cover.cover-left-menu > .wrapper::before{top:0; transform-origin:top left; transform:rotate(-60deg);}
-.tab-cover.cover-left-menu > .wrapper::after{bottom:0; transform-origin:bottom left; transform:rotate(60deg);}
+.cover.cover-left-menu > .wrapper::before{top:0; transform-origin:top left; transform:rotate(-5deg);}
+.cover.cover-left-menu > .wrapper::after{bottom:0; transform-origin:bottom left; transform:rotate(5deg);}
 
-.tab-cover.cover-right-menu > .wrapper::before, .cover.cover-right-menu > .wrapper::after{
+.cover.cover-right-menu > .wrapper::before, .cover.cover-right-menu > .wrapper::after{
     content:''; position:absolute; right:0; width:200vw; height:80vh;
 }
 
-.tab-cover.cover-03 > .wrapper, .cover.cover-03 > .wrapper::before, .cover.cover-03 > .wrapper::after{
+.cover.cover-03 > .wrapper, .cover.cover-03 > .wrapper::before, .cover.cover-03 > .wrapper::after{
     background:#bd9062;
 }
-.tab-cover.cover-04 > .wrapper, .cover.cover-04 > .wrapper::before, .cover.cover-04 > .wrapper::after{
+.cover.cover-04 > .wrapper, .cover.cover-04 > .wrapper::before, .cover.cover-04 > .wrapper::after{
     background:#835d52;
 }
-.tab-cover.cover-05 > .wrapper, .cover.cover-05 > .wrapper::before, .cover.cover-05 > .wrapper::after{
+.cover.cover-05 > .wrapper, .cover.cover-05 > .wrapper::before, .cover.cover-05 > .wrapper::after{
     background:#8ca8b3;
 }
-.tab-cover.cover-06 > .wrapper, .cover.cover-06 > .wrapper::before, .cover.cover-06 > .wrapper::after{
+.cover.cover-06 > .wrapper, .cover.cover-06 > .wrapper::before, .cover.cover-06 > .wrapper::after{
     background:#70675b;
 }
 

@@ -170,6 +170,25 @@
             );
             timeline.reversed( false );
         });
+        banner.find('.btn-menu').click(function(e){
+            e.preventDefault();
+            $('.menu-tab').css(
+                'position', 'relative'
+            );
+            $('.menu-tab').css(
+                'opacity', '1'
+            );
+
+        });
+        $('.menu-tab').find('.btn-back').click(function(e){
+            e.preventDefault();
+            $('.menu-tab').css(
+                'position', 'fixed'
+            );
+            $('.menu-tab').css(
+                'opacity', '0'
+            );
+        });
         $('.info-01').find('.btn-back').click(function(e){
             e.preventDefault();
             timeline.reversed( true );

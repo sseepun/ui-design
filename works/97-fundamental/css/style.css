@@ -54,16 +54,16 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 .cover.cover-left-menu > .wrapper::before{top:0; transform-origin:top left; transform:rotate(-60deg);}
 .cover.cover-left-menu > .wrapper::after{bottom:0; transform-origin:bottom left; transform:rotate(60deg);}
 
-.cover.cover-03 > .wrapper, .cover.cover-03 > .wrapper::before, .cover.cover-02 > .wrapper::after{
+.cover.cover-03 > .wrapper, .cover.cover-03 > .wrapper::before, .cover.cover-03 > .wrapper::after{
     background:#bd9062;
 }
-.cover.cover-04 > .wrapper, .cover.cover-04 > .wrapper::before, .cover.cover-01 > .wrapper::after{
+.cover.cover-04 > .wrapper, .cover.cover-04 > .wrapper::before, .cover.cover-04 > .wrapper::after{
     background:#835d52;
 }
-.cover.cover-05 > .wrapper, .cover.cover-05 > .wrapper::before, .cover.cover-02 > .wrapper::after{
+.cover.cover-05 > .wrapper, .cover.cover-05 > .wrapper::before, .cover.cover-05 > .wrapper::after{
     background:#8ca8b3;
 }
-.cover.cover-06 > .wrapper, .cover.cover-06 > .wrapper::before, .cover.cover-01 > .wrapper::after{
+.cover.cover-06 > .wrapper, .cover.cover-06 > .wrapper::before, .cover.cover-06 > .wrapper::after{
     background:#70675b;
 }
 

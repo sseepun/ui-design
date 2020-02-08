@@ -183,7 +183,21 @@
 
 
         // Timeline menu tab
-        var timelineMenu = new TimelineMax(paused: true})
+        var timelineMenu = new TimelineMax({paused: true})
+            .fromTo('.banner-01 .text-container', .8,
+                    {top: 0, opacity: 1, ease: Power1.easeInOut},
+                    {top: -80, opacity: 0, ease: Power1.easeInOut}
+                )
+            .fromTo('.banner-01', .8,
+                {top: 0, opacity: 1, ease: Power3.easeInOut},
+                {top: -100, opacity: 0, ease: Power3.easeInOut},
+                '-=.6'
+            )
+            .fromTo('.cover-03', 1, 
+                {css: {transform: 'translateY(0)'}, ease: Power2.easeInOut}, 
+                {css: {transform: 'translateY(calc(-200vh - 40vw))'}, ease: Power2.easeInOut}, 
+                '-=.6'
+            )
 
 
         $('.menu-tab').find('.btn-back').click(function(e){

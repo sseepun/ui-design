@@ -19,7 +19,7 @@ body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slate
 .menu-tab .btn-back{
     position:absolute; top:1.5rem; right:3rem; font-size:3rem; cursor:pointer;
 }
-.menu-tab .menu-item{display:flex; top:0; left:0; right:0; bottom:0; justify-content: center; align-items: center; font-size: 5rem; line-height: 2; cursor: pointer; outline: none;}
+.menu-tab .menu-item-home, .menu-item-about, .menu-item-work, .menu-item-contact{display:flex; top:0; left:0; right:0; bottom:0; justify-content: center; align-items: center; font-size: 5rem; line-height: 2; cursor: pointer; outline: none;}
 
 
 

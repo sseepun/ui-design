@@ -180,6 +180,12 @@
             );
 
         });
+
+
+        // Timeline menu tab
+        var timelineMenu = new TimelineMax(paused: true})
+
+
         $('.menu-tab').find('.btn-back').click(function(e){
             e.preventDefault();
             $('.menu-tab').css(

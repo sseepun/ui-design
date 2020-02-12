@@ -96,13 +96,13 @@
                         <h5 class="animate" style="--delay:.1s;">
                             <div>MEN'S SPORT SHOES</div>
                         </h5>
-                        <h1 class="animate" style="--delay:.4s;">
+                        <h1 class="animate" style="--delay:.3s;">
                             <div>NIKE SPORT SHOES</div>
                         </h1>
-                        <h3 class="animate" style="--delay:.7s;">
+                        <h3 class="animate" style="--delay:.5s;">
                             <div>$80</div>
                         </h3>
-                        <div class="desc animate2" style="--delay:1s;">
+                        <div class="desc animate2" style="--delay:.7s;">
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -110,7 +110,7 @@
                                 irure dolor in reprehenderit.
                             </div>
                         </div>
-                        <div class="btns animate3" style="--delay:1.3s;">
+                        <div class="btns animate3" style="--delay:.9s;">
                             <div class="btn">LEARN MORE</div>
                         </div>
                     </div>
@@ -125,13 +125,13 @@
                         <h5 class="animate" style="--delay:.1s;">
                             <div>MEN'S SPORT SHOES</div>
                         </h5>
-                        <h1 class="animate" style="--delay:.4s;">
+                        <h1 class="animate" style="--delay:.3s;">
                             <div>NIKE SPORT SHOES</div>
                         </h1>
-                        <h3 class="animate" style="--delay:.7s;">
+                        <h3 class="animate" style="--delay:.5s;">
                             <div>$80</div>
                         </h3>
-                        <div class="desc animate2" style="--delay:1s;">
+                        <div class="desc animate2" style="--delay:.7s;">
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
@@ -139,7 +139,7 @@
                                 irure dolor in reprehenderit.
                             </div>
                         </div>
-                        <div class="btns animate3" style="--delay:1.3s;">
+                        <div class="btns animate3" style="--delay:.9s;">
                             <div class="btn">LEARN MORE</div>
                         </div>
                     </div>
@@ -313,15 +313,15 @@
 
         var hamburgers = $('.hamburger');
         var sidenavTl = new TimelineMax({paused: true})
-            .to('nav.sidenav', .6, {
+            .to('nav.sidenav', .8, {
                 css: {width: '100vw'}, ease: Power2.easeInOut
             })
-            .from('nav.sidenav > .wrapper', .6, {
+            .from('nav.sidenav > .wrapper', .8, {
                 css: {left: '-100vw'}, ease: Power2.easeInOut
-            }, '-=.8s')
+            }, '-=.8')
             .staggerFrom('nav.sidenav .menu', .8, {
                 y: 120, opacity: 0, ease: Power3.easeInOut
-            }, .1, '-=.3s')
+            }, .1, '-=.3')
             .reverse();
         hamburgers.click(function(e){
             e.preventDefault();
@@ -354,19 +354,15 @@
                     onComplete: function(){
                         pageAnimation();
                     }
-                });
-            setTimeout(function(){
-                new TimelineMax()
-                    .to('nav.topnav', .01, {opacity: 1})
-                    .staggerFrom('nav.topnav > *', 1, {
-                        y: -160, opacity: 0, ease: Power2.easeInOut
-                    }, .12);
-                new TimelineMax().delay(.24)
-                    .to('nav.footer', .01, {opacity: .2})
-                    .staggerFrom('nav.footer > *', 1, {
-                        y: 160, opacity: 0, ease: Power2.easeInOut
-                    }, .12);
-            }, 2500);
+                })
+                .to('nav.topnav', .01, {opacity: 1})
+                .staggerFrom('nav.topnav > *', 1, {
+                    y: -160, opacity: 0, ease: Power2.easeInOut
+                }, .12)
+                .to('nav.footer', .01, {opacity: .2}, '-=.76')
+                .staggerFrom('nav.footer > *', 1, {
+                    y: 160, opacity: 0, ease: Power2.easeInOut
+                }, .12, '-=.76');
         }
         function pageAnimation(slide=1, back=false){
             if(object!==undefined){
@@ -387,17 +383,17 @@
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
                             z: radians2(15, camera.rotation.z), ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.position, t, {
                             x: 0.045, y: 0.03, z: 0, ease: Power1.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.rotation, t, {
                             x: radians2(0, object.rotation.x), y: radians2(-90), 
                             z: radians2(0, object.rotation.z), ease: Power1.easeOut,
                             onComplete: function(){
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
-                        }, '-='+t+'s');
+                        }, '-='+t);
                 }else if(slide==2){
                     let t = back? 0.7: 0.9,
                         x = (window.innerWidth<1199.98)? -0.25: -0.34,
@@ -415,17 +411,17 @@
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
                             z: radians2(0, camera.rotation.z), ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.position, t, {
                             x: x, y: -0.03, z: 0.05, ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.rotation, t, {
                             x: radians2(90, object.rotation.x), y: radians2(-180, object.rotation.y), 
                             z: z, ease: Power3.easeOut,
                             onComplete: function(){
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
-                        }, '-='+t+'s');
+                        }, '-='+t);
                 }else if(slide==3){
                     let t = back? 0.7: 0.9,
                         x = (window.innerWidth<1199.98)? -0.28: -0.42,
@@ -443,17 +439,17 @@
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
                             z: radians2(0, camera.rotation.z), ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.position, t, {
                             x: x, y: -0.01, z: 0.05, ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.rotation, t, {
                             x: radians2(90, object.rotation.x), y: radians2(-180, object.rotation.y), 
                             z: z, ease: Power3.easeOut,
                             onComplete: function(){
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
-                        }, '-='+t+'s');
+                        }, '-='+t);
                 }else if(slide==4){
                     let t = back? 0.7: 0.9,
                         zoom = (window.innerWidth<1199.98)? 0.62: 0.5;
@@ -469,17 +465,17 @@
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
                             z: radians2(-15, camera.rotation.z), ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.position, t, {
                             x: 0, y: 0, z: 0, ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.rotation, t, {
                             x: radians2(40, object.rotation.x), y: radians2(-270, object.rotation.y), 
                             z: radians2(360, object.rotation.z), ease: Power3.easeOut,
                             onComplete: function(){
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
-                        }, '-='+t+'s');
+                        }, '-='+t);
                 }else if(slide==5){
                     let t = back? 0.7: 1.2,
                         zoom = (window.innerWidth<1199.98)? 1: 0.9;
@@ -495,17 +491,17 @@
                         .to(camera.rotation, t, {
                             x: radians2(0, camera.rotation.x), y: radians2(0, camera.rotation.y), 
                             z: radians2(0, camera.rotation.z), ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.position, t, {
                             x: 0, y: 0, z: 0, ease: Power3.easeOut
-                        }, '-='+t+'s')
+                        }, '-='+t)
                         .to(object.rotation, t, {
                             x: radians2(0, object.rotation.x), y: radians2(-270, object.rotation.y), 
                             z: radians2(360, object.rotation.z), ease: Power3.easeOut,
                             onComplete: function(){
                                 fps = 0; slides.eq(slide-1).addClass('active');
                             }
-                        }, '-='+t+'s')
+                        }, '-='+t)
                 }
             }
         }

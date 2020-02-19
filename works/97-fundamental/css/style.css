@@ -1,0 +1,15 @@
+/* Reset */
+html, body{
+    padding:0; margin:0; font-size:.9em; overflow-x:hidden!important; overflow-y:auto!important;
+    font-family:'Nike'; line-height:1.15; font-weight:600; font-style:normal; color:#fff;
+    background:#101010;
+}
+body *{
+    padding:0; margin:0;box-sizing:border-box; -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+/* body::-webkit-scrollbar{width:0;}
+body::-webkit-scrollbar-track{box-shadow:inset 0 0 6px rgba(0, 0, 0, 0.3);}
+body::-webkit-scrollbar-thumb{background-color:darkgrey; outline:1px solid slategrey;}
+@media screen and (max-width:1199.98px){ html, body{font-size:.75rem;} }
+@media screen and (max-width:991.98px){ html, body{font-size:.7rem;} } */

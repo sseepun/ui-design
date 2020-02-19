@@ -1,10 +1,7 @@
-import fragment from './shaders/fragment.glsl';
-import vertex from './shaders/vertex.glsl';
+import { fragmentShader, vertexShader } from './Shaders.js';
+const gn = new GyroNorm();
 
-import GyroNorm from './lib/gyronorm';
-const gn = new GyroNorm.GyroNorm();
-
-export default class Sketch {
+export default class Background {
   constructor() {
     this.container = document.getElementById('gl');
     this.canvas = document.createElement('canvas');
@@ -91,13 +88,13 @@ export default class Sketch {
     // create program
     this.program = this.gl.createProgram();
     // add shaders
-    this.addShader( vertex, this.gl.VERTEX_SHADER );
-    this.addShader( fragment, this.gl.FRAGMENT_SHADER );
+    this.addShader( vertexShader, this.gl.VERTEX_SHADER );
+    this.addShader( fragmentShader, this.gl.FRAGMENT_SHADER );
     // link & use program
     this.gl.linkProgram( this.program );
     this.gl.useProgram( this.program );
 
-    // create fragment uniforms
+    // create fragmentShader uniforms
     this.uResolution = new Uniform( 'resolution', '4f' , this.program, this.gl );
     this.uMouse = new Uniform( 'mouse', '2f' , this.program, this.gl );
     this.uTime = new Uniform( 'time', '1f' , this.program, this.gl );
@@ -208,8 +205,6 @@ export default class Sketch {
 
   		that.mouseTargetX = (halfX - e.clientX)/halfX;
   		that.mouseTargetY = (halfY - e.clientY)/halfY;
-
-      
   	});
   }
 
@@ -297,4 +292,4 @@ function clamp(number, lower, upper) {
   }
   return number;
 }
-new Sketch();
+new Background();

@@ -160,13 +160,12 @@
         </div>
     </div>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="js/utils.js"></script>
     <script type="module">
         import * as THREE from '../../extensions/three/build/three.module.js';
-        import { OrbitControls } from '../../extensions/three/examples/jsm/controls/OrbitControls.js';
+        // import { OrbitControls } from '../../extensions/three/examples/jsm/controls/OrbitControls.js';
         import { GLTFLoader } from '../../extensions/three/examples/jsm/loaders/GLTFLoader.js';
         import { RGBELoader } from '../../extensions/three/examples/jsm/loaders/RGBELoader.js';
         import { EquirectangularToCubeGenerator } from '../../extensions/three/examples/jsm/loaders/EquirectangularToCubeGenerator.js';
@@ -193,11 +192,11 @@
             // Loader manager
             var manager = new THREE.LoadingManager();
             manager.onProgress = function(url, itemsLoaded, itemsTotal){
-                console.log('GLTF loaded - '+Math.round(itemsLoaded / itemsTotal * 100)+'%');
+                console.log('Model loaded - '+Math.round(itemsLoaded / itemsTotal * 100)+'%');
             };
-            manager.onStart = function(url, itemsLoaded, itemsTotal){ console.log('GLTF - Start loading'); };
-            manager.onLoad = function(){ console.log('GLTF - Loading complete!'); };
-            manager.onError = function(url){ console.log('GLTF - Error loading '+url); };
+            manager.onStart = function(url, itemsLoaded, itemsTotal){ console.log('Model - Start loading'); };
+            manager.onLoad = function(){ console.log('Model - Loading complete!'); };
+            manager.onError = function(url){ console.log('Model - Error loading '+url); };
 
             new RGBELoader().setDataType(THREE.UnsignedByteType).setPath('assets/hdr/')
                 .load('colorful_studio_1k.hdr', function(hdr){

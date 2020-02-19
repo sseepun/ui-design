@@ -279,7 +279,6 @@
                 slickBanner.slick('slickGoTo', slideIndex);
             }, 300);
         });
-
     </script>
 </body>
 </html>

@@ -27,8 +27,8 @@
                 this.imageSets = [
                     {
                         selector: '#container-01',
-                        image: 'img/car.jpg',
-                        depth: 'img/car-map.jpg',
+                        image: 'img/flower.jpg',
+                        depth: 'img/flower-map.jpg',
                         hthreshold: 34,
                         vthreshold: 18
                     }, 
